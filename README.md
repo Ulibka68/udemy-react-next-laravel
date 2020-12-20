@@ -41,7 +41,7 @@ php artisan make:seeder UserSeeder
 // seeder вызывает factory database/factories/UserFactory.php
 php artisan db:seed
 
-//***** 5. Migrations *************
+//***** 5. Migrations END *************
 
 
 
