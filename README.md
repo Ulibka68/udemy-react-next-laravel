@@ -20,7 +20,9 @@ php artisan serve
 docker-compose up
 // docker build
 
+//***** 4. Routes *************
 
+//***** 4. Routes END *************
 
 //*******************************************************************
 wsl -l
