@@ -44,7 +44,7 @@ php artisan db:seed
 //***** 5. Migrations END *************
 
 //***** 6. Rest *****************
-
+php artisan route:list
 //***** 6. Rest END *************
 
 

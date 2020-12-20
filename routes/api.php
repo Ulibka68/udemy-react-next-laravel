@@ -31,26 +31,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('userall','UserController@index');
 Route::get('users1/{id}','UserController@show');
 Route::post('users1','UserController@store');
 Route::put('users1/{id}','UserController@update');
 Route::delete('users1/{id}','UserController@destroy');
 
-Route::post('login', 'AuthController@login');
-Route::post('register', 'AuthController@register');
+Все эти вызовы  заменяет один вызов apiResource
+*/
 
-Route::group(['middleware' => 'auth:api'], function () {
-    Route::get('chart', 'DashboardController@chart');
-    Route::get('user', 'UserController@user');
-    Route::put('users/info', 'UserController@updateInfo');
-    Route::put('users/password', 'UserController@updatePassword');
-    Route::post('upload', 'ImageController@upload');
-    Route::get('export', 'OrderController@export');
-
-    Route::apiResource('users', 'UserController');
-    Route::apiResource('roles', 'RoleController');
-    Route::apiResource('products', 'ProductController');
-    Route::apiResource('orders', 'OrderController')->only('index', 'show');
-    Route::apiResource('permissions', 'PermissionController')->only('index');
-});
+Route::apiResource('users1', 'UserController');
