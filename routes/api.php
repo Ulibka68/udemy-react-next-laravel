@@ -31,9 +31,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('hello',function () {
-    return 'Hello';
-});
+Route::get('hello','UserController@index');
 
 Route::post('login', 'AuthController@login');
 Route::post('register', 'AuthController@register');

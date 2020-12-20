@@ -21,7 +21,8 @@ docker-compose up
 // docker build
 
 //***** 4. Routes *************
-
+// создание контроллера
+php artisan make:controller UserController
 //***** 4. Routes END *************
 
 //*******************************************************************
