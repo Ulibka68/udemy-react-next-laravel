@@ -25,7 +25,29 @@ docker-compose up
 php artisan make:controller UserController
 //***** 4. Routes END *************
 
-//*******************************************************************
+//***** 5. Migrations *************
+// внесли изменения в user table database/migrations/2014_10_12_000000_create_users_table.php
+// мы должны войти внутрь контейнера
+docker ps // какие контейнеры сейчас выполняются RUN
+// в самой правой колонке указаны имена контейнеров, нам нужен admin_api
+docker exec -it admin_api sh
+
+// находясь внутри контейнера запускай команду 
+php artisan migrate
+
+php artisan make:seeder UserSeeder
+// создан database/seeds/UserSeeder.php
+
+// seeder вызывает factory database/factories/UserFactory.php
+php artisan db:seed
+
+//***** 5. Migrations *************
+
+
+
+
+
+//->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->->
 wsl -l
 
 Сжать диск docker
