@@ -32,6 +32,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('userall','UserController@index');
+Route::get('users1/{id}','UserController@show');
+Route::post('users1','UserController@store');
+Route::put('users1/{id}','UserController@update');
+Route::delete('users1/{id}','UserController@destroy');
 
 Route::post('login', 'AuthController@login');
 Route::post('register', 'AuthController@register');
