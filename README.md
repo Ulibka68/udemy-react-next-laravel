@@ -54,6 +54,30 @@ php artisan make:request UserCreateRequest
 
 php artisan make:request UserUpdateRequest
 
+### 8. Pagination
+This package generates helper files that enable your IDE to provide accurate autocompletion. Generation is done based on the files in your project, so they are always up-to-date.  
+
+https://github.com/barryvdh/laravel-ide-helper  
+
+<span style="color:blue;font-weight:bold">composer require --dev barryvdh/laravel-ide-helper</span>  
+
+php artisan ide:generate
+
+php artisan ide:models
+// app/User.php добавлены комментарии
+
+
+### 9. Laravel Passport
+login  
+https://laravel.com/docs/7.x/passport
+
+composer require laravel/passport "~9.0"
+
+php artisan migrate
+
+php artisan passport:install
+
+
 ## WSL
 wsl -l
 
