@@ -79,6 +79,13 @@ php artisan passport:install
 
 ### 10. Login
 
+php artisan make:controller AuthController
+
+### 11. Middlewares
+
+
+
+
 ## WSL
 wsl -l
 

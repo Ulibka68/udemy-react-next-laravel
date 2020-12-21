@@ -41,4 +41,5 @@ Route::delete('users1/{id}','UserController@destroy');
 Все эти вызовы  заменяет один вызов apiResource
 */
 
+Route::post('login','AuthController@login');
 Route::apiResource('users1', 'UserController');
