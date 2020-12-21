@@ -91,6 +91,17 @@ Authorizaqtion : Bearer пробел + токен полученный при л
 php artisan make:request RegisterRequest
 
 ### 13. Profile
+Добавлены роуты по обновлению профиля
+
+### 14. Roles
+php artisan make:request UpdatePasswordRequest  
+php artisan make:migration create_roles_table  
+php artisan migrate   
+php artisan make:model Role     
+php artisan ide:models        
+
+
+
 
 ## WSL
 wsl -l
