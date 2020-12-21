@@ -100,8 +100,13 @@ php artisan migrate
 php artisan make:model Role     
 php artisan ide:models        
 
+### 15. Foreign Keys
+php artisan make:migration add_role_id_to_users
 
-
+// удаляет все данные из таблиц и создает их заново
+php artisan migrate:fresh  
+php artisan make:seeder RoleSeeder   
+php artisan db:seed    
 
 ## WSL
 wsl -l

@@ -24,6 +24,7 @@ $factory->define(User::class, function (Faker $faker) {
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
         'email' => $faker->unique()->safeEmail,
-        'password' => Hash::make('1234')// password
+        'password' => Hash::make('1234'), // password
+        'role_id' => \App\Role::inRandomOrder()->first()->id,
     ];
 });
