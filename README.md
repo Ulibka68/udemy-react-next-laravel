@@ -90,6 +90,8 @@ Authorizaqtion : Bearer пробел + токен полученный при л
 валидация для регистрации
 php artisan make:request RegisterRequest
 
+### 13. Profile
+
 ## WSL
 wsl -l
 

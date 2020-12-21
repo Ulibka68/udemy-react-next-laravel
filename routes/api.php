@@ -44,6 +44,10 @@ Route::delete('users1/{id}','UserController@destroy');
 // сделаем роуты users1 приватными
 Route::group(['middleware'=>'auth:api'],function () {
     Route::apiResource('users1', 'UserController');
+//    get current user
+    Route::get('user','UserController@user');
+    Route::put('users/info','UserController@updateInfo');
+    Route::put('users/password','UserController@updatePassword');
 });
 Route::post('login','AuthController@login');
 Route::post('register','AuthController@register');
