@@ -41,5 +41,8 @@ Route::delete('users1/{id}','UserController@destroy');
 Все эти вызовы  заменяет один вызов apiResource
 */
 
+// сделаем роуты users1 приватными
+Route::group(['middleware'=>'auth:api'],function () {
+    Route::apiResource('users1', 'UserController');
+});
 Route::post('login','AuthController@login');
-Route::apiResource('users1', 'UserController');

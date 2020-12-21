@@ -82,8 +82,9 @@ php artisan passport:install
 php artisan make:controller AuthController
 
 ### 11. Middlewares
+Для авторизации и получения, например списке пользователей надо передать в postamn Header:  
 
-
+Authorizaqtion : Bearer пробел + токен полученный при логин
 
 
 ## WSL
