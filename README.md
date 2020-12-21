@@ -77,6 +77,7 @@ php artisan migrate
 
 php artisan passport:install
 
+### 10. Login
 
 ## WSL
 wsl -l
