@@ -43,8 +43,16 @@ php artisan db:seed
 php artisan route:list
 
 ### 7. Custom Requests
+//Если не указать first_name при создании - то возникнет ошибка.
+//Нужен custom validation  
 
+php artisan make:request UserCreateRequest  
+//app/Http/Requests/UserCreateRequest.php
 
+---
+В заголовках запроса не забудь поставить Accept:application/json иначе ошибку будет не видно
+
+php artisan make:request UserUpdateRequest
 
 ## WSL
 wsl -l
