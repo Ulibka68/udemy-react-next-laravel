@@ -46,3 +46,4 @@ Route::group(['middleware'=>'auth:api'],function () {
     Route::apiResource('users1', 'UserController');
 });
 Route::post('login','AuthController@login');
+Route::post('register','AuthController@register');

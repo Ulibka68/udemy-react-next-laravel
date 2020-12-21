@@ -86,6 +86,9 @@ php artisan make:controller AuthController
 
 Authorizaqtion : Bearer пробел + токен полученный при логин
 
+### 12. Register
+валидация для регистрации
+php artisan make:request RegisterRequest
 
 ## WSL
 wsl -l
