@@ -108,6 +108,9 @@ php artisan migrate:fresh
 php artisan make:seeder RoleSeeder   
 php artisan db:seed    
 
+### 16. Api Resources
+    при создании пользователя надо включить role_id
+
 ## WSL
 wsl -l
 

@@ -15,12 +15,12 @@ class UserController extends Controller
 {
     public function index()
     {
-        return User::paginate();
+        return User::with('role')->paginate();
     }
 
     public function show($id)
     {
-        return User::find($id);
+        return User::with('role')->find($id);
     }
 
 //    UserCreateRequest - описывает правила валидации
@@ -31,6 +31,7 @@ class UserController extends Controller
             'first_name' => $request->input('first_name'),
             'last_name' => $request->input('last_name'),
             'email' => $request->input('email'),
+            'role_id' => $request->input('role_id'),
             'password' => Hash::make('1234'), // поставим всегда пароль по умолчанию
 
         ]);
@@ -40,7 +41,7 @@ class UserController extends Controller
     public function update(UserUpdateRequest $request, $id)
     {
         $user = User::find($id);
-        $user->update($request->only('first_name', 'last_name', 'email'));
+        $user->update($request->only('first_name', 'last_name', 'email','role_id'));
         return response($user, Response::HTTP_ACCEPTED);
     }
 

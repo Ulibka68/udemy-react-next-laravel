@@ -61,5 +61,10 @@ class User extends Authenticatable
         'password',
     ];
 
+//    foreign key fore role
+    public function role() {
+        return $this->belongsTo(Role::class);
+    }
+
 
 }
